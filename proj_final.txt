@@ -1,0 +1,47 @@
+Background
+
+	In colleges and universities, checklists are used to track the progress of a particular student in the courses that he is taking. Found in a checklist of a course are a list of all subjects that needs to be finished by the student.
+
+	For a very long time, instructors make use of the pen-and-paper to fill out the checklist of the students that he/she advises. Since this process takes too much time and inconsistencies and mistakes can happen, an automated checklist system is viable.
+
+Objective
+
+	The objective of this database is to ensure a precise, updated, reliable and safe data system for the advisers to use so as to address to their advising needs and the students' full progress and status. This is for the convenience of both the adviser and advisee. This is so that instead for an adviser to keep folders and papers to store in their cabinets, they would be able to have a database that is well-kept and is not prone to any physical data loss such as fire, water or the likes.
+
+Database Schema
+	Tables
+		| admin             |
+		| advises           |
+		| allcourses        |
+		| checklist         |
+		| course_equiv      |
+		| course_prereq     |
+		| course_quali      |
+		| instructor        |
+		| offeredcourses    |
+		| prog_elec         |
+		| reportofgrades    |
+		| req_ge            |
+		| school            |
+		| student           |
+		| takescourses
+
+Levels of Access:
+	Student Access
+		- CRUD System
+			- views his checklist
+			- views his report of Grades (per semester)
+			- create and update and delete personal student information
+	Adviser Access
+		- CRUD System
+			- can view all of the checklist of the students that he/she advises
+			- can view all of the ROG of the students that he/she advises
+			- can insert ROG of a student per semester. program will automatically update the student's checklist
+			- create and update and delete personal instructor information
+	Admin Access
+		- CRUD System
+			- can add, delete and edit a student in the database
+			- can add, delete and edit an instructor in the database
+			- can add, delete and edit all courses in the database
+
+
